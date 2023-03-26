@@ -5,13 +5,25 @@
 :root {
   scroll-behavior: smooth;
 }
+.xxy{
+  font-size: medium;
+}
+th.first, td.first {
+  text-align: left;
+}
+th, td {
+  text-align: center;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
   background: #f6f9ff;
   color: #444444;
 }
+.red{
+  color: red;
 
+}
 a {
   color: #4154f1;
   text-decoration: none;

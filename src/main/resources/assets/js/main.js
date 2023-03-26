@@ -1,3 +1,24 @@
+// Define a variable to store the favorite state of each location
+let favorites = {
+  'University of Virginia Rotunda': false,
+  'McCormick Road Dormitories': false,
+  'Clark Hall': false,
+  'Lawn Tennis Courts': false,
+  'Rice Hall': false,
+};
+
+// Function to toggle the favorite state and icon color
+function toggleFavorite(icon) {
+  const row = icon.closest('tr');
+  const location = row.cells[0].textContent;
+  const isFavorite = favorites[location];
+  favorites[location] = !isFavorite;
+  icon.classList.toggle('bi-heart-fill', !isFavorite);
+  icon.classList.toggle('bi-heart', isFavorite);
+  icon.classList.toggle('red', !isFavorite);
+
+}
+
 (function() {
   "use strict";
 
