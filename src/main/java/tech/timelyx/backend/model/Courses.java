@@ -1,3 +1,5 @@
+package tech.timelyx.backend.model;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -20,7 +22,38 @@ public class Courses {
         this.notes = notes;
     }
 
-    // getters and setters
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
+
+    public Map<String, List<String>> getUpdates() {
+        return updates;
+    }
+
+    public void setUpdates(Map<String, List<String>> updates) {
+        this.updates = updates;
+    }
+
+    public Map<String, String> getNotes() {
+        return notes;
+    }
+
+    public void setNotes(Map<String, String> notes) {
+        this.notes = notes;
+    }
+// getters and setters
 
     @Override
     public String toString() {
