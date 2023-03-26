@@ -3,11 +3,8 @@ package tech.timelyx.backend.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Map;
+import tech.timelyx.backend.model.internal.FrequencyData;
+import tech.timelyx.backend.model.internal.LocationCoordinates;
 
 @Document(collection = "locations")
 public class Location {
