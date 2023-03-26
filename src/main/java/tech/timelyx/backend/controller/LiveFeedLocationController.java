@@ -18,6 +18,7 @@ public class LiveFeedLocationController {
 
     @PostMapping
     public ResponseEntity<LiveFeedLocation> createLiveFeedLocation(@RequestBody LiveFeedLocation location) {
+        System.out.println(location);
         LiveFeedLocation newLocation = liveFeedLocationService.createLiveFeedLocation(location);
         return new ResponseEntity<>(newLocation, HttpStatus.CREATED);
     }
