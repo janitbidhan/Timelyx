@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Timelyx</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        .sticky-note {
+            background-color: rgba(255, 255, 0, 0.81);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            min-height: 100px;
+            min-width: 100px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .sticky-note:before {
+            background-color: #9d9258;
+            border-radius: 5px 5px 0 0;
+            content: "";
+            height: 20px;
+            left: 0;
+            position: absolute;
+            top: -20px;
+            width: 100%;
+        }
+
+        .sticky-note:after {
+            border-color: transparent transparent #red;
+            border-style: solid;
+            border-width: 0 10px 10px;
+            content: "";
+            height: 0;
+            left: 50%;
+            margin-left: -10px;
+            position: absolute;
+            top: -9px;
+            width: 0;
+        }
+
+        .sticky-note .delete-note {
+            background-color: #ccc;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            height: 30px;
+            line-height: 30px;
+            position: absolute;
+            right: -15px;
+            text-align: center;
+            top: -15px;
+            width: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header class="header fixed-top d-flex align-items-center" id="header">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a class="logo d-flex align-items-center" href="index.html">
+            <img alt="" src="assets/img/logo.png">
+            <span class="d-none d-lg-block">Timelyx</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+        <form action="#" class="search-form d-flex align-items-center" method="POST">
+            <input name="query" placeholder="Search" title="Enter search keyword" type="text">
+            <button title="Search" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+
+            <li class="nav-item d-block d-lg-none">
+                <a class="nav-link nav-icon search-bar-toggle " href="#">
+                    <i class="bi bi-search"></i>
+                </a>
+            </li><!-- End Search Icon-->
+
+            <li class="nav-item dropdown">
+
+                <a class="nav-link nav-icon" data-bs-toggle="dropdown" href="#">
+                    <i class="bi bi-bell"></i>
+                    <span class="badge bg-primary badge-number">4</span>
+                </a><!-- End Notification Icon -->
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                    <li class="dropdown-header">
+                        You have 4 new notifications
+                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="notification-item">
+                        <i class="bi bi-exclamation-circle text-warning"></i>
+                        <div>
+                            <h4>Plan of study updated</h4>
+                            <p>A course timeline is now available for the courses, electives, and graduation
+                                requirements</p>
+                            <p>30 min. ago</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="notification-item">
+                        <i class="bi bi-x-circle text-danger"></i>
+                        <div>
+                            <h4> Last day to submit Biology assignment</h4>
+                            <p>Posted by Ms. Kelly</p>
+                            <p>1 hr. ago</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="notification-item">
+                        <i class="bi bi-check-circle text-success"></i>
+                        <div>
+                            <h4>Note sharing</h4>
+                            <p>Review your notes to see what your classmates have shared</p>
+                            <p>4hr. ago</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="notification-item">
+                        <i class="bi bi-info-circle text-primary"></i>
+                        <div>
+                            <h4>New feature alert</h4>
+                            <p>Check live feed of available spaces across school</p>
+                            <p>1hr. ago</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-footer">
+                        <a href="#">Show all notifications</a>
+                    </li>
+
+                </ul><!-- End Notification Dropdown Items -->
+
+            </li><!-- End Notification Nav -->
+
+            <li class="nav-item dropdown">
+
+                <a class="nav-link nav-icon" data-bs-toggle="dropdown" href="#">
+                    <i class="bi bi-chat-left-text"></i>
+                    <span class="badge bg-success badge-number">2</span>
+                </a><!-- End Messages Icon -->
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+                    <li class="dropdown-header">
+                        You have 2 new messages
+                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="message-item">
+                        <a href="#">
+                            <i class="bi bi-envelope" style="margin: 20px;"></i>
+                            <div>
+                                <h4>Mr. Brightley</h4>
+                                <p>Week 1 English assignment due this Friday</p>
+                                <p>1 min. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="message-item">
+                        <a href="#">
+                            <i class="bi bi-envelope" style="margin: 20px;"></i>
+                            <div>
+                                <h4>Ms. Eleanor</h4>
+                                <p>Kindly look at my suggestions under scheduler </p>
+                                <p>1hr. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="message-item">
+                        <a href="#">
+                            <i class="bi bi-envelope-open" style="margin: 20px;"></i>
+                            <div>
+                                <h4>Elizabeth Mcord</h4>
+                                <p>Shared a link </p>
+                                <p>4hrs. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="dropdown-footer">
+                        <a href="#">Show all messages</a>
+                    </li>
+
+                </ul><!-- End Messages Dropdown Items -->
+
+            </li><!-- End Messages Nav -->
+
+            <li class="nav-item dropdown pe-3">
+
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" data-bs-toggle="dropdown" href="#">
+                    <img alt="Profile" class="rounded-circle" src="assets/img/user-image.jpeg">
+                    <span class="d-none d-md-block dropdown-toggle ps-2">Janit Bidhan</span>
+                </a><!-- End Profile Iamge Icon -->
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                        <h6>Janit Bidhan</h6>
+                        <span>G01326111</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="setting.html">
+                            <i class="bi bi-gear"></i>
+                            <span>Account Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="faqs.html">
+                            <i class="bi bi-question-circle"></i>
+                            <span>Need Help?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+                        </a>
+                    </li>
+
+                </ul><!-- End Profile Dropdown Items -->
+            </li><!-- End Profile Nav -->
+
+        </ul>
+    </nav><!-- End Icons Navigation -->
+
+</header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside class="sidebar" id="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="index.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="courses.html">
+                <i class="bi bi-menu-button-wide"></i>
+                <span>Courses</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="plans.html">
+                <i class="bi bi-signpost-split"></i>
+                <span>Plan of Study</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="cal.html">
+                <i class="bi bi-calendar2-plus"></i>
+                <span>Scheduler</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="notes.html">
+                <i class="bi bi-pen"></i>
+                <span>Notes</span>
+            </a>
+        </li>
+
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="feedback.html">
+                <i class="bi bi-journal-text"></i>
+                <span>Feedback</span>
+            </a>
+        </li>
+
+    </ul>
+</aside><!-- End Sidebar-->
+
+<main class="main" id="main">
+
+    <div class="pagetitle">
+        <h1>Notes</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Notes</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="">
+                    <div class="card">
+                        <div class="card-body" style="padding: 40px;border: solid;">
+                            <h3 style="margin: 5px;">Save to add a new Sticky Note</h3>
+                            <hr>
+                            <div id="sticky-notes"></div>
+                            <form class="my-5" id="add-note-form">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="note-text" placeholder="Type your note here..."
+                                              rows="3" style="padding: 20px;margin: 5px;"></textarea>
+                                    <button class="btn btn-primary" type="submit">Add Note</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer class="footer" id="footer">
+    <div class="copyright">
+        &copy; Copyright <strong><span>Timelyx</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Inspired Design from <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+</footer><!-- End Footer -->
+
+<a class="back-to-top d-flex align-items-center justify-content-center" href="#"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/chart.js/chart.umd.js"></script>
+<script src="assets/vendor/echarts/echarts.min.js"></script>
+<script src="assets/vendor/quill/quill.min.js"></script>
+<script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<script>const notes = [];
+
+const addNoteForm = document.getElementById('add-note-form');
+const noteText = document.getElementById('note-text');
+const stickyNotes = document.getElementById('sticky-notes');
+
+addNoteForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const text = noteText.value.trim();
+    if (text.length === 0) {
+        return;
+    }
+    const note = createNoteElement(text);
+    notes.push(note);
+    updateNotes();
+    noteText.value = '';
+});
+
+function createNoteElement(text) {
+    const noteElement = document.createElement('div');
+    noteElement.classList.add('sticky-note');
+    noteElement.innerHTML = `
+    <div class="delete-note">×</div>
+    <div class="note-text">${text}</div>
+  `;
+    noteElement.querySelector('.delete-note').addEventListener('click', function () {
+        const index = notes.indexOf(noteElement);
+        if (index !== -1) {
+            notes.splice(index, 1);
+            updateNotes();
+        }
+    });
+    return noteElement;
+}
+
+function updateNotes() {
+    stickyNotes.innerHTML = '';
+    notes.forEach(note => stickyNotes.appendChild(note));
+}
+</script>
+</body>
+
+</html>
