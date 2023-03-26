@@ -16,6 +16,14 @@ public class FrequencyData {
 
     // getters and setters
 
+    public Map<LocalDate, List<HourlyFrequencyData>> getHourlyData() {
+        return hourlyData;
+    }
+
+    public void setHourlyData(Map<LocalDate, List<HourlyFrequencyData>> hourlyData) {
+        this.hourlyData = hourlyData;
+    }
+
     @Override
     public String toString() {
         return "FrequencyData{" +

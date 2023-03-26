@@ -16,6 +16,22 @@ public class HourlyFrequencyData {
 
     // getters and setters
 
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public int getFrequency() {
+        return frequency;
+    }
+
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
+    }
+
     @Override
     public String toString() {
         return "HourlyFrequencyData{" +
