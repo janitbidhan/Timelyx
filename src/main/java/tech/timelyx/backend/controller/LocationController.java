@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/locations")
+@RequestMapping("/api/ml/recommender")
 public class LocationController {
     @Autowired
     private LocationService locationService;
