@@ -25,6 +25,12 @@
     <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -291,12 +297,7 @@
             </a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="space.html">
-                <i class="bi bi-body-text"></i>
-                <span>Personal Space</span>
-            </a>
-        </li>
+
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="feedback.html">
@@ -322,101 +323,147 @@
 
     <section class="section">
         <div class="row">
-            <div class="col-lg-6">
-
+            <div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Default Accordion</h5>
-
                         <!-- Default Accordion -->
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Accordion Item #1
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="container">
+                            <!--        <div class="container">-->
+                            <!--            <div class="row mt-5">-->
+                            <!--                <div class="col-12 text-center">-->
+                            <!--                    <button class="btn btn-primary mr-3" data-toggle="modal" data-target="#add-event-modal">Add Event</button>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+
+                            <div class="recommendations mt-5" style="padding: 10px;border: 1px solid;text-align: center;     box-shadow: 5px 5px black;">
+                                <h4>Recommendations</h4>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <button class="btn btn-primary btn-block btn-recommendation"
+                                                data-text="Study CS 101 HW2 at Rice Hall"
+                                                data-start="2023-03-29T15:00"
+                                                data-end="2023-03-29T16:00"
+                                                data-location="Rice Hall">
+                                            <h5 class="mb-0">2023-03-29</h5>
+                                            <p class="mb-0">3 PM to 4 PM</p>
+                                            <p class="mb-0">Study CS 101 HW2 at Rice Hall</p>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <button class="btn btn-primary btn-block btn-recommendation"
+                                                data-text="Study CS 101 HW2 at Albert Small Hall"
+                                                data-start="2023-03-27T15:00"
+                                                data-end="2023-03-27T16:00"
+                                                data-location="Albert Small Hall">
+                                            <h5 class="mb-0">2023-03-27</h5>
+                                            <p class="mb-0">3 PM to 4 PM</p>
+                                            <p class="mb-0">Study CS 101 HW2 at Albert Hall</p>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <button class="btn btn-primary btn-block btn-recommendation"
+                                                data-text="Study CS 101 HW2 at Olsson Hall"
+                                                data-start="2023-03-28T14:00"
+                                                data-end="2023-03-28T16:00"
+                                                data-location="Olsson Hall">
+                                            <h5 class="mb-0">2023-03-28</h5>
+                                            <p class="mb-0">4 PM to 5 PM</p>
+                                            <p class="mb-0">Study CS 101 HW2 at Olsson Hall</p>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Accordion Item #2
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <div class="row">
+                                <div class="col-md-12" style="padding: 20px;">
+                                    <h2>Schedule</h2>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div id="calendar"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Accordion Item #3
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                            <!-- Add event modal -->
+                            <div aria-hidden="true" aria-labelledby="add-event-modal-label" class="modal fade" id="add-event-modal" role="dialog"
+                                 tabindex="-1">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="add-event-modal-label">Add Event</h5>
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="add-event-form">
+                                                <div class="form-group">
+                                                    <label class="col-form-label" for="event-title">Title:</label>
+                                                    <input class="form-control" id="event-title" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label" for="event-start">Start Date:</label>
+                                                    <input class="form-control" id="event-start" type="datetime-local">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label" for="event-end">End Date:</label>
+                                                    <input class="form-control" id="event-end" type="datetime-local">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+                                            <button class="btn btn-primary" id="add-event-btn" type="button">Add Event</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- End Default Accordion Example -->
+
+                            <!-- Modify event modal -->
+                            <div aria-hidden="true" aria-labelledby="modify-event-modal-label" class="modal fade" id="modify-event-modal"
+                                 role="dialog" tabindex="-1">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modify-event-modal-label">Modify Event</h5>
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="modify-event-form">
+                                                <input id="event-id" type="hidden">
+                                                <div class="form-group">
+                                                    <label class="col-form-label" for="modify-event-title">Title:</label>
+                                                    <input class="form-control" id="modify-event-title" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label" for="modify-event-start">Start Date:</label>
+                                                    <input class="form-control" id="modify-event-start" type="datetime-local">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label" for="modify-event-end">End Date:</label>
+                                                    <input class="form-control" id="modify-event-end" type="datetime-local">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+                                            <button class="btn btn-primary" id="modify-event-btn" type="button">Save Changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
 
                     </div>
                 </div>
 
             </div>
 
-            <div class="col-lg-6">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Accordion without outline borders</h5>
-
-                        <!-- Accordion without outline borders -->
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        Accordion Item #1
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                        Accordion Item #2
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                        Accordion Item #3
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                </div>
-                            </div>
-                        </div><!-- End Accordion without outline borders -->
-
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
 </main><!-- End #main -->
@@ -427,11 +474,7 @@
         &copy; Copyright <strong><span>Timelyx</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-        Inspired Design from <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Inspired Design from <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
 </footer><!-- End Footer -->
 
@@ -449,7 +492,138 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        // Initialize the calendar
+        $('#calendar').fullCalendar({
+            defaultView:"month",
+            header: {
+                left: 'prev,next today list',
+                center: 'title',
+                right: 'month, list'
+            },
+            defaultDate: moment().format("YYYY-MM-DD"),
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'Course Name 1',
+                    start: '09:00:00',
+                    end: '12:00:00',
+                    backgroundColor: 'black',
+                    borderColor: 'black',
+                    textColor: 'white',
+                    dow: [ 2 ],
+                    editable: false,
+                },
+                {
+                    title: 'Course Name 2',
+                    start: '09:00:00',
+                    end: '12:00:00',
+                    backgroundColor: 'black',
+                    borderColor: 'black',
+                    textColor: 'white',
+                    dow: [ 4 ],
+                    editable: false,
+                },
+                {
+                    title: 'Course Name 3',
+                    start: '17:00:00',
+                    end: '22:00:00',
+                    backgroundColor: 'black',
+                    borderColor: 'black',
+                    textColor: 'white',
+                    dow: [ 4 ],
+                    editable: false,
+                },
+                {
+                    title: 'Fun Activity',
+                    start: '2023-03-30T19:00:00',
+                    end: '2023-03-30T20:00:00',
+                    backgroundColor: 'blue',
+                    borderColor: 'blue',
+                    textColor: 'white',
+                    editable: true,
+                },
+                {
+                    title: 'Study Activity',
+                    start: '2023-03-31T19:00:00',
+                    end: '2023-03-31T20:00:00',
+                    backgroundColor: 'blue',
+                    borderColor: 'blue',
+                    textColor: 'white',
+                    editable: true,
+                }
+            ],
+            eventClick: function (event) {
+                // Open the modify event modal with the selected event's data
+                $('#event-id').val(event.id);
+                $('#modify-event-title').val(event.title);
+                $('#modify-event-start').val(moment(event.start).format("YYYY-MM-DD[T]HH:mm:ss"));
+                $('#modify-event-end').val(moment(event.end).format("YYYY-MM-DD[T]HH:mm:ss"));
+                $('#modify-event-modal').modal('show');
+            },
+            dayClick: function (date, jsEvent, view) {
+                // Open the add event modal with the selected date as the start and end date
+                $('#event-start').val(moment(date).format("YYYY-MM-DD[T]HH:mm:ss"));
+                $('#event-end').val(moment(date).add(1, 'hours').format("YYYY-MM-DD[T]HH:mm:ss"));
+                $('#add-event-modal').modal('show');
+            }
+        });
 
+        // Add event button click handler
+        $('#add-event-btn').click(function () {
+            var eventData = {
+                title: $('#event-title').val(),
+                start: $('#event-start').val(),
+                end: $('#event-end').val()
+            };
+            if (eventData.title && eventData.start && eventData.end) {
+                $('#calendar').fullCalendar('renderEvent', eventData, true); // add the event to the calendar
+                $('#add-event-modal').modal('hide');
+            }
+        });
+        // Modify event button click handler
+        $('#modify-event-btn').click(function () {
+            var event = $('#calendar').fullCalendar('clientEvents', $('#event-id').val())[0]; // get the selected event
+            if (event) {
+                event.title = $('#modify-event-title').val();
+                event.start = $('#modify-event-start').val();
+                event.end = $('#modify-event-end').val();
+                $('#calendar').fullCalendar('updateEvent', event); // update the event on the calendar
+                $('#modify-event-modal').modal('hide');
+            }
+        });
+
+        // Remove event button click handler
+        $('#remove-event-btn').click(function () {
+            var event = $('#calendar').fullCalendar('clientEvents', $('#event-id').val())[0]; // get the selected event
+            if (event) {
+                $('#calendar').fullCalendar('removeEvents', event._id); // remove the event from the calendar
+                $('#modify-event-modal').modal('hide');
+            }
+        });
+    });
+    // Add recommendation event handlers
+    $('.btn-recommendation').click(function() {
+        // Get recommendation data from button attributes
+        var start = $(this).data('start');
+        var end = $(this).data('end');
+        var location = $(this).data('location');
+        var text = $(this).data('text');
+
+        // Create a new event object
+        var event = {
+            title: text,
+            start: start,
+            end: end,
+            location: location
+        };
+
+        // Add the event to the calendar
+        $('#calendar').fullCalendar('renderEvent', event);
+    });
+</script>
 </body>
 
 </html>

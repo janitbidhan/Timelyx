@@ -15,7 +15,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,26 +29,80 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        .sticky-note {
+            background-color: rgba(255, 255, 0, 0.81);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            min-height: 100px;
+            min-width: 100px;
+            padding: 10px;
+            position: relative;
+        }
 
+        .sticky-note:before {
+            background-color: #9d9258;
+            border-radius: 5px 5px 0 0;
+            content: "";
+            height: 20px;
+            left: 0;
+            position: absolute;
+            top: -20px;
+            width: 100%;
+        }
+
+        .sticky-note:after {
+            border-color: transparent transparent #red;
+            border-style: solid;
+            border-width: 0 10px 10px;
+            content: "";
+            height: 0;
+            left: 50%;
+            margin-left: -10px;
+            position: absolute;
+            top: -9px;
+            width: 0;
+        }
+
+        .sticky-note .delete-note {
+            background-color: #ccc;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            height: 30px;
+            line-height: 30px;
+            position: absolute;
+            right: -15px;
+            text-align: center;
+            top: -15px;
+            width: 30px;
+        }
+
+    </style>
 </head>
 
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top d-flex align-items-center">
+<header class="header fixed-top d-flex align-items-center" id="header">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
+        <a class="logo d-flex align-items-center" href="index.html">
+            <img alt="" src="assets/img/logo.png">
             <span class="d-none d-lg-block">Timelyx</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
     <div class="search-bar">
-        <form class="search-form d-flex align-items-center" method="POST" action="#">
-            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        <form action="#" class="search-form d-flex align-items-center" method="POST">
+            <input name="query" placeholder="Search" title="Enter search keyword" type="text">
+            <button title="Search" type="submit"><i class="bi bi-search"></i></button>
         </form>
     </div><!-- End Search Bar -->
 
@@ -62,7 +117,7 @@
 
             <li class="nav-item dropdown">
 
-                <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                <a class="nav-link nav-icon" data-bs-toggle="dropdown" href="#">
                     <i class="bi bi-bell"></i>
                     <span class="badge bg-primary badge-number">4</span>
                 </a><!-- End Notification Icon -->
@@ -80,7 +135,8 @@
                         <i class="bi bi-exclamation-circle text-warning"></i>
                         <div>
                             <h4>Plan of study updated</h4>
-                            <p>A course timeline is now available for the courses, electives, and graduation requirements</p>
+                            <p>A course timeline is now available for the courses, electives, and graduation
+                                requirements</p>
                             <p>30 min. ago</p>
                         </div>
                     </li>
@@ -137,7 +193,7 @@
 
             <li class="nav-item dropdown">
 
-                <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                <a class="nav-link nav-icon" data-bs-toggle="dropdown" href="#">
                     <i class="bi bi-chat-left-text"></i>
                     <span class="badge bg-success badge-number">2</span>
                 </a><!-- End Messages Icon -->
@@ -203,8 +259,8 @@
 
             <li class="nav-item dropdown pe-3">
 
-                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <img src="assets/img/user-image.jpeg" alt="Profile" class="rounded-circle">
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" data-bs-toggle="dropdown" href="#">
+                    <img alt="Profile" class="rounded-circle" src="assets/img/user-image.jpeg">
                     <span class="d-none d-md-block dropdown-toggle ps-2">Janit Bidhan</span>
                 </a><!-- End Profile Iamge Icon -->
 
@@ -253,7 +309,7 @@
 </header><!-- End Header -->
 
 <!-- ======= Sidebar ======= -->
-<aside id="sidebar" class="sidebar">
+<aside class="sidebar" id="sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
@@ -291,12 +347,7 @@
             </a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="space.html">
-                <i class="bi bi-body-text"></i>
-                <span>Personal Space</span>
-            </a>
-        </li>
+
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="feedback.html">
@@ -308,7 +359,7 @@
     </ul>
 </aside><!-- End Sidebar-->
 
-<main id="main" class="main">
+<main class="main" id="main">
 
     <div class="pagetitle">
         <h1>Notes</h1>
@@ -321,121 +372,42 @@
     </div><!-- End Page Title -->
 
     <section class="section">
-        <div class="row">
-            <div class="col-lg-6">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Default Accordion</h5>
-
-                        <!-- Default Accordion -->
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Accordion Item #1
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="">
+                    <div class="card">
+                        <div class="card-body" style="padding: 40px;border: solid;">
+                            <h3 style="margin: 5px;">Save to add a new Sticky Note</h3>
+                            <hr>
+                            <div id="sticky-notes"></div>
+                            <form class="my-5" id="add-note-form">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="note-text" placeholder="Type your note here..."
+                                              rows="3" style="padding: 20px;margin: 5px;"></textarea>
+                                    <button class="btn btn-primary" type="submit">Add Note</button>
                                 </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Accordion Item #2
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Accordion Item #3
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End Default Accordion Example -->
 
+                            </form>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-
-            <div class="col-lg-6">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Accordion without outline borders</h5>
-
-                        <!-- Accordion without outline borders -->
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        Accordion Item #1
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                        Accordion Item #2
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                        Accordion Item #3
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                </div>
-                            </div>
-                        </div><!-- End Accordion without outline borders -->
-
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
+<footer class="footer" id="footer">
     <div class="copyright">
         &copy; Copyright <strong><span>Timelyx</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-        Inspired Design from <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Inspired Design from <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
 </footer><!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a class="back-to-top d-flex align-items-center justify-content-center" href="#"><i
+        class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -449,7 +421,46 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script>const notes = [];
 
+const addNoteForm = document.getElementById('add-note-form');
+const noteText = document.getElementById('note-text');
+const stickyNotes = document.getElementById('sticky-notes');
+
+addNoteForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const text = noteText.value.trim();
+    if (text.length === 0) {
+        return;
+    }
+    const note = createNoteElement(text);
+    notes.push(note);
+    updateNotes();
+    noteText.value = '';
+});
+
+function createNoteElement(text) {
+    const noteElement = document.createElement('div');
+    noteElement.classList.add('sticky-note');
+    noteElement.innerHTML = `
+    <div class="delete-note">×</div>
+    <div class="note-text">${text}</div>
+  `;
+    noteElement.querySelector('.delete-note').addEventListener('click', function () {
+        const index = notes.indexOf(noteElement);
+        if (index !== -1) {
+            notes.splice(index, 1);
+            updateNotes();
+        }
+    });
+    return noteElement;
+}
+
+function updateNotes() {
+    stickyNotes.innerHTML = '';
+    notes.forEach(note => stickyNotes.appendChild(note));
+}
+</script>
 </body>
 
 </html>
