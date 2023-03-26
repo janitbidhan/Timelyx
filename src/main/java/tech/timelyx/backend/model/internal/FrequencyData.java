@@ -1,4 +1,4 @@
-package tech.timelyx.backend.model;
+package tech.timelyx.backend.model.internal;
 
 import java.time.LocalDate;
 import java.util.List;
