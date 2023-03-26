@@ -7,21 +7,37 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Plan {
     @Id
     private String id;
-    private String planId;
+    private String planDetails;
 
     public Plan() {}
 
-    public Plan(String planId) {
-        this.planId = planId;
+    public Plan(String planDetails) {
+        this.planDetails = planDetails;
     }
 
     // getters and setters
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getPlanDetails() {
+        return planDetails;
+    }
+
+    public void setPlanDetails(String planDetails) {
+        this.planDetails = planDetails;
+    }
 
     @Override
     public String toString() {
         return "Plan{" +
                 "id='" + id + '\'' +
-                ", planId='" + planId + '\'' +
+                ", planId='" + planDetails + '\'' +
                 '}';
     }
 }
