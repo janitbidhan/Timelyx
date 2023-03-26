@@ -893,11 +893,16 @@ h6 {
   border-radius: 5px;
 }
 
-.dashboard .news h4 {
+.dashboard .news p {
   font-size: 15px;
-  margin-left: 95px;
-  font-weight: bold;
+  margin-left: 20px;
+  padding: 5px;
   margin-bottom: 5px;
+}
+.dashboard .news i {
+  margin-right: 5px;
+  padding: 5px;
+
 }
 
 .dashboard .news h4 a {
@@ -909,11 +914,11 @@ h6 {
   color: #4154f1;
 }
 
-.dashboard .news p {
-  font-size: 14px;
-  color: #777777;
-  margin-left: 95px;
-}
+/*.dashboard .news p {*/
+/*  font-size: 14px;*/
+/*  color: #777777;*/
+/*  margin-left: 95px;*/
+/*}*/
 
 /* Recent Sales */
 .dashboard .recent-sales {
