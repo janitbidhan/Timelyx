@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Timelyx</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header class="header fixed-top d-flex align-items-center" id="header">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a class="logo d-flex align-items-center" href="index.html">
+            <img alt="" src="assets/img/logo.png">
+            <span class="d-none d-lg-block">Timelyx</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+        <form action="#" class="search-form d-flex align-items-center" method="POST">
+            <input name="query" placeholder="Search" title="Enter search keyword" type="text">
+            <button title="Search" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+
+            <li class="nav-item d-block d-lg-none">
+                <a class="nav-link nav-icon search-bar-toggle " href="#">
+                    <i class="bi bi-search"></i>
+                </a>
+            </li><!-- End Search Icon-->
+
+            <li class="nav-item dropdown">
+
+                <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                    <i class="bi bi-bell"></i>
+                    <span class="badge bg-primary badge-number">4</span>
+                </a><!-- End Notification Icon -->
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                    <li class="dropdown-header">
+                        You have 4 new notifications
+                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="notification-item">
+                        <i class="bi bi-exclamation-circle text-warning"></i>
+                        <div>
+                            <h4>Plan of study updated</h4>
+                            <p>A course timeline is now available for the courses, electives, and graduation requirements</p>
+                            <p>30 min. ago</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="notification-item">
+                        <i class="bi bi-x-circle text-danger"></i>
+                        <div>
+                            <h4> Last day to submit Biology assignment</h4>
+                            <p>Posted by Ms. Eleanor</p>
+                            <p>1 hr. ago</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="notification-item">
+                        <i class="bi bi-check-circle text-success"></i>
+                        <div>
+                            <h4>Note sharing</h4>
+                            <p>Review your notes to see what your classmates have shared</p>
+                            <p>4hr. ago</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="notification-item">
+                        <i class="bi bi-info-circle text-primary"></i>
+                        <div>
+                            <h4>New feature alert</h4>
+                            <p>Check live feed of available spaces across school</p>
+                            <p>1hr. ago</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-footer">
+                        <a href="#">Show all notifications</a>
+                    </li>
+
+                </ul><!-- End Notification Dropdown Items -->
+
+            </li><!-- End Notification Nav -->
+
+            <li class="nav-item dropdown">
+
+                <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                    <i class="bi bi-chat-left-text"></i>
+                    <span class="badge bg-success badge-number">2</span>
+                </a><!-- End Messages Icon -->
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+                    <li class="dropdown-header">
+                        You have 2 new messages
+                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="message-item">
+                        <a href="#">
+                            <i class="bi bi-envelope" style="margin: 20px;"></i>
+                            <div>
+                                <h4>Mr. Brightley</h4>
+                                <p>Week 1 English assignment due this Friday</p>
+                                <p>1 min. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="message-item">
+                        <a href="#">
+                            <i class="bi bi-envelope" style="margin: 20px;"></i>
+                            <div>
+                                <h4>Ms. Eleanor</h4>
+                                <p>Kindly look at my suggestions under scheduler </p>
+                                <p>1hr. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="message-item">
+                        <a href="#">
+                            <i class="bi bi-envelope-open" style="margin: 20px;"></i>
+                            <div>
+                                <h4>Elizabeth Mcord</h4>
+                                <p>Shared a link </p>
+                                <p>4hrs. ago</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="dropdown-footer">
+                        <a href="#">Show all messages</a>
+                    </li>
+
+                </ul><!-- End Messages Dropdown Items -->
+
+            </li><!-- End Messages Nav -->
+
+            <li class="nav-item dropdown pe-3">
+
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    <img src="assets/img/user-image.jpeg" alt="Profile" class="rounded-circle">
+                    <span class="d-none d-md-block dropdown-toggle ps-2">Janit Bidhan</span>
+                </a><!-- End Profile Iamge Icon -->
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                        <h6>Janit Bidhan</h6>
+                        <span>G01326111</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="setting.html">
+                            <i class="bi bi-gear"></i>
+                            <span>Account Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="faqs.html">
+                            <i class="bi bi-question-circle"></i>
+                            <span>Need Help?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+                        </a>
+                    </li>
+
+                </ul><!-- End Profile Dropdown Items -->
+            </li><!-- End Profile Nav -->
+
+        </ul>
+    </nav><!-- End Icons Navigation -->
+
+
+</header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside class="sidebar" id="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="index.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="courses.html">
+                <i class="bi bi-menu-button-wide"></i>
+                <span>Courses</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="plans.html">
+                <i class="bi bi-signpost-split"></i>
+                <span>Plan of Study</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="cal.html">
+                <i class="bi bi-calendar2-plus"></i>
+                <span>Scheduler</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="notes.html">
+                <i class="bi bi-pen"></i>
+                <span>Notes</span>
+            </a>
+        </li>
+
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="feedback.html">
+                <i class="bi bi-journal-text"></i>
+                <span>Feedback</span>
+            </a>
+        </li>
+
+    </ul>
+</aside><!-- End Sidebar-->
+
+<main class="main" id="main">
+
+    <div class="pagetitle">
+        <h1>Courses</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Courses</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Spring 2023</h5>
+
+                        <!-- Default Accordion -->
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button aria-controls="collapseOne" aria-expanded="true" class="accordion-button"
+                                            data-bs-target="#collapseOne" data-bs-toggle="collapse"
+                                            type="button">
+                                        <span class="accordion-info"
+                                              style="margin-left: 0px;padding:5px;border: black 1px dotted;">Course: Biology 201</span>
+                                        <span class="accordion-info"
+                                              style="margin-left: 40px;padding:5px;border: black 1px dotted;">Teacher: Ms. Eleanor </span>
+                                        <span class="accordion-info"
+                                              style="margin-left: 40px;padding:5px;border: black 1px dotted;">Location: Room 101</span>
+                                    </button>
+                                </h2>
+                                <div aria-labelledby="headingOne" class="accordion-collapse collapse show"
+                                     data-bs-parent="#accordionExample" id="collapseOne">
+                                    <div class="accordion-body">
+                                        <span>Today</span>
+                                        <ul>
+                                            <li> [Task] 
+                                            Focused on the cell and molecular aspects of Biology</li>
+                                            <li> [Update]  Basic genetics</li>
+                                        </ul>
+                                        <span>Yesterday</span>
+                                        <ul>
+                                            <li>[Task] Basic structure of animal and plant cells
+                                                
+                                                </li>
+                                            <li>[Update]  Intracellular organelles
+                                            </li>
+                                        </ul>
+                                        <span>Older</span>
+                                        <ul>
+                                            <li>[Task] Cell cycle</li>
+                                            <li> [Update] Metabolic pathways</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button aria-controls="collapseTwo" aria-expanded="true" class="accordion-button"
+                                            data-bs-target="#collapseTwo" data-bs-toggle="collapse"
+                                            type="button">
+                                        <span class="accordion-info"
+                                              style="margin-left: 0px;padding:5px;border: black 1px dotted;">Course: English 202</span>
+                                        <span class="accordion-info"
+                                              style="margin-left: 40px;padding:5px;border: black 1px dotted;">Teacher: Ms. Kelly </span>
+                                        <span class="accordion-info"
+                                              style="margin-left: 40px;padding:5px;border: black 1px dotted;">Location: Room 102</span>
+                                    </button>
+                                </h2>
+                                <div aria-labelledby="headingTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                                     id="collapseTwo">
+                                    <div class="accordion-body">
+                                        <span>Today</span>
+                                        <ul>
+                                            <li> [Task] Introduces students to the critical reading and writing of literature</li>
+                                            <li>[Update]  Analyzing the elements of literature</li>
+                                        </ul>
+                                        <span>Yesterday</span>
+                                        <ul>
+                                            <li>[Task] Write about their own interpretations of texts</li>
+                                            <li>[Update] Write a critical essay about a literary text</li>
+                                        </ul>
+                                        <span>Older</span>
+                                        <ul>
+                                            <li>[Task] Annotated bibliography</li>
+                                            <li>[Update] Research paper</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button aria-controls="collapseThree" aria-expanded="true" class="accordion-button"
+                                            data-bs-target="#collapseThree" data-bs-toggle="collapse"
+                                            type="button">
+                                        <span class="accordion-info"
+                                              style="margin-left: 0px;padding:5px;border: black 1px dotted;">Course History 301</span>
+                                        <span class="accordion-info"
+                                              style="margin-left: 40px;padding:5px;border: black 1px dotted;">Teacher: Mr. Brightley </span>
+                                        <span class="accordion-info"
+                                              style="margin-left: 40px;padding:5px;border: black 1px dotted;">Location: Room 106</span>
+                                    </button>
+                                </h2>
+                                <div aria-labelledby="headingThree" class="accordion-collapse collapse"
+                                     data-bs-parent="#accordionExample" id="collapseThree">
+                                    <div class="accordion-body">
+                                        <span>Today</span>
+                                        <ul>
+                                            <li>[Task] Methods and practices of historical research</li>
+                                            <li>[Update] Interpretation of historical data</li>
+                                        </ul>
+                                        <span>Yesterday</span>
+                                        <ul>
+                                            <li>[Task] History of historical scholarship</li>
+                                            <li>[Update] Discussing final research paper</li>
+                                        </ul>
+                                        <span>Older</span>
+                                        <ul>
+                                            <li>[Task] Rise of civilizations</li>
+                                            <li>[Update] Industrial revolution</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Default Accordion Example -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+          <div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Courses Taken in Past</h5>
+
+                    <!-- Accordion without outline borders -->
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button aria-controls="flush-collapseOne" aria-expanded="false" class="accordion-button collapsed"
+                                        data-bs-target="#flush-collapseOne" data-bs-toggle="collapse"
+                                        type="button">
+                                        <span class="accordion-info"
+                                              style="margin-left: 0px;padding:5px;border: black 1px dotted;">Course Biology 201</span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Teacher: Ms. Eleanor </span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Location: Room 101</span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Fall 2022</span>
+                                </button>
+                            </h2>
+                            <div aria-labelledby="flush-headingOne" class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionFlushExample" id="flush-collapseOne">
+                                <div class="accordion-body">Add text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button aria-controls="flush-collapseTwo" aria-expanded="false" class="accordion-button collapsed"
+                                        data-bs-target="#flush-collapseTwo" data-bs-toggle="collapse"
+                                        type="button">
+                                        <span class="accordion-info"
+                                              style="margin-left: 0px;padding:5px;border: black 1px dotted;">Course English 202</span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Teacher: Ms. Kelly </span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Location: Room 102</span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Fall 2022</span>
+                                </button>
+                            </h2>
+                            <div aria-labelledby="flush-headingTwo" class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionFlushExample" id="flush-collapseTwo">
+                                <div class="accordion-body">Add text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button aria-controls="flush-collapseThree" aria-expanded="false" class="accordion-button collapsed"
+                                        data-bs-target="#flush-collapseThree" data-bs-toggle="collapse"
+                                        type="button">
+                                     <span class="accordion-info"
+                                           style="margin-left: 0px;padding:5px;border: black 1px dotted;">Course History 301</span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Teacher: Mr. Brightley</span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Location: Room 106</span>
+                                  <span class="accordion-info"
+                                        style="margin-left: 40px;padding:5px;border: black 1px dotted;">Fall 2022</span>
+                                </button>
+                            </h2>
+                            <div aria-labelledby="flush-headingThree" class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionFlushExample" id="flush-collapseThree">
+                                <div class="accordion-body">Add text
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Accordion without outline borders -->
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer class="footer" id="footer">
+    <div class="copyright">
+        &copy; Copyright <strong><span>Timelyx</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Inspired Design from <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+</footer><!-- End Footer -->
+
+<a class="back-to-top d-flex align-items-center justify-content-center" href="#"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/chart.js/chart.umd.js"></script>
+<script src="assets/vendor/echarts/echarts.min.js"></script>
+<script src="assets/vendor/quill/quill.min.js"></script>
+<script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

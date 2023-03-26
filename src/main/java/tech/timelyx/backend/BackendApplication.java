@@ -6,10 +6,17 @@ import com.mongodb.ServerApi;
 import com.mongodb.ServerApiVersion;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.io.File;
 
 @SpringBootApplication
 public class BackendApplication {
 
+    @GetMapping("/")
+    public File index() {
+        return new File("src/main/resources/static/index.html");
+    }
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
     }
