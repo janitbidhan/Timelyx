@@ -23,7 +23,7 @@ public class BackendApplication {
 
 //    private static void checkConnection() {
 //        System.out.println("Connecting Checking");
-//        ConnectionString connectionString = new ConnectionString("mongodb+srv://kriskrozr:timelyx@timelyx-cluster.pa3iipa.mongodb.net/?retryWrites=true&w=majority");
+//        ConnectionString connectionString = new ConnectionString("PATH");
 //        MongoClientSettings settings = MongoClientSettings.builder()
 //                .applyConnectionString(connectionString)
 //                .serverApi(ServerApi.builder()
