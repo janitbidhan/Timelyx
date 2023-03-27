@@ -1,3 +1,6 @@
+# Timelyx
+[http://timelyx.tech/](http://timelyx.tech/)
+
 # Inspiration
 Time is the most precious entity for a student. Time spent on a productive activity that could've been wasted, results in better outcomes. We've engineered a solution that eases the problems that we ourselves have faced as students.
 
